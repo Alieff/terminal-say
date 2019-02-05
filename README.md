@@ -15,12 +15,19 @@ Spawn notification with avatar
     ``bash install.sh``
 
 ## Usage / Workflow : 
-1. Change bot avatar
+1. Change avatar
   - enter $HOME/.script/database/ignorable/base
-  - change bot.png
+  - change avatar.png (the name must be avatar.png)
 
-2. Adjust positioning
-  - see my other project "say"
+2. Adjust avatar size
+  - open say.sh
+  - find 'convert resize'
+  - adjust the number
+
+3. Adjust positioning
+  - open say.sh
+  - find 'composite geometry'
+  - adjust the number
 
 
 ## Other Command: 
