@@ -2,7 +2,7 @@
 mkdir -p "$HOME/Documents/.script/database/ignorable/temp"
 mkdir -p "$HOME/Documents/.script/database/ignorable/base"
 installer_path="$(dirname ${BASH_SOURCE[0]})"
-destination_path="$HOME/Documents/.script"
+destination_path="$HOME/Documents/.script/misc"
 script_name='say.sh'
 script_identifier='alieff/terminal-say'
 alias_name='say'
@@ -23,11 +23,11 @@ if [ -z "$(cat $HOME/.bashrc | grep $script_identifier)" ]; then
   # add identifier
   echo "# $script_identifier" >> $HOME/.bashrc
   # add auto source script
-  "echo" "source $destination_path/$script_name" >> $HOME/.bashrc
+  "echo" "function $alias_name(){ bash $destination_path/$script_name; }" >> $HOME/.bashrc
   echo "registering to bashrc done"
   echo "if you want to remove just edit '$HOME/.bashrc'"
 else # case if already installed
   echo 
-  echo "$script_name auto source is already defined / alias already defined"
+  echo "$script_name auto source is already defined"
   echo
 fi
