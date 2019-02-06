@@ -23,7 +23,7 @@ if [ -z "$(cat $HOME/.bashrc | grep $script_identifier)" ]; then
   # add identifier
   echo "# $script_identifier" >> $HOME/.bashrc
   # add auto source script
-  "echo" "function $alias_name(){ bash $destination_path/$script_name \"$@\"; }" >> $HOME/.bashrc
+  "echo" "function $alias_name(){ bash $destination_path/$script_name \""'$@'"\"; }" >> $HOME/.bashrc
   echo "registering to bashrc done"
   echo "if you want to remove just edit '$HOME/.bashrc'"
 else # case if already installed
