@@ -23,7 +23,7 @@ composite -geometry +10+0 -gravity Center $temp_folder/label.gif $temp_folder/ca
 composite -geometry +120+30 $temp_folder/labelled-callout.gif $filename $filename ;  # combine callout with main canvas
 # copying images
 if [ "$#" -eq 2 ]; then
-  echo 'generating images at '$(pwd)'/'$(basename $filename)
+  # echo 'generating images at '$(pwd)'/'$(basename $filename)
   "cp" $filename "$(pwd)"
 fi
 
